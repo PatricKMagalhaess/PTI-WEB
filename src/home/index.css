@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: blue;
+    padding-inline: 16px;
+}
+
+.header .nav .logo {
+    color: white;
+    font-size: 28px;
+    
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    color: white;
+    font-size: 18px;
+    padding-block: 16px;
+}
+
+.nav-list a:hover {
+    color: blue;
+    background: white;
+    border-radius: 4px;
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: white;
+    margin-block: 4px;
+}
+
+@media(max-width: 768px) {
+    .nav {
+        padding-inline: 16px;
+    }
+
+    .nav-list {
+        position: fixed;   
+        top: 0;
+        left: 0;    
+        width: 100vw;
+        height: 100vh;
+        background: blue;
+        clip-path: circle(100px at 90% -10%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        z-index: 999; /* Certifique-se de que o menu está acima de outros elementos */
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    /* Ativando o menu hamburguer */
+    .nav-list.active {
+        clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+}
+
+.faixa-home {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    height: 720px;
+    background: url('/public/images/background.png') no-repeat center;
+    background-size: cover;
+}
+
+.faixa-home h1 {
+    font-size: 48px;
+    margin-block: 16px;
+}
+
+.faixa-home p {
+    font-size: 24px;
+    margin-block: 16px;
+}
+
+.faixa-home button {
+    padding: 16px 32px;
+    font-size: 18px;
+    background: blue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.faixa-home button:hover {
+    background: white;
+    color: blue;
+}
+
+.faixa-serviços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: blue;
+}
+
+.serviços {
+    display: flex;
+    background: blue;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    max-width: 100%;
+    padding: 16px;
+}
+
+.serviços-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 70px;
+    justify-content: space-around;
+    
+}
+
+.serviços-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px 5px 5px rgba(154, 238, 29, 0.75);
+    gap: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.serviços-container div button {
+    padding: 16px 32px;
+    font-size: 18px;
+    background: blue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.serviços-container div button:hover {
+    background: white;
+    color: blue;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 20px;
+    background: whitesmoke;
+    margin-top: 70px;
+    justify-content: space-around;
+}
+
+.sobre .info {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    gap: 40px;
+
+}
+
+.sobre .info h1 {
+    font-size: 48px;
+}
+
+.sobre .info p {
+    font-size: 18px;
+}
+
+.Trabalhe.Conosco {
+    background-color: #f4f4f9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.Trabalhe.Conosco h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.Trabalhe.Conosco form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Trabalhe.Conosco input,
+.Trabalhe.Conosco textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.Trabalhe.Conosco input:focus,
+.Trabalhe.Conosco textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.Trabalhe.Conosco button {
+    background-color: #0056b3;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Trabalhe.Conosco button:hover {
+    background-color: #004080;
+}
+
+
+.Trabalhe.Conosco textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+.Trabalhe.Conosco form input,
+.Trabalhe.Conosco form textarea,
+.Trabalhe.Conosco form button {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .Trabalhe.Conosco {
+        padding: 20px;
+    }
+
+    .Trabalhe.Conosco h1 {
+        font-size: 2em;
+    }
+
+    .Trabalhe.Conosco form {
+        padding: 0;
+    }
+}
+
+.footer {
+    background: blue;
+    padding: 30px 30px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+}
