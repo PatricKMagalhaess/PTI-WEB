@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma para contratar profissionais como eletricistas, encanadores, pintores e pedreiros para serviços domésticos e comerciais.">
     <title>Mão na Obra</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -12,7 +13,10 @@
     <header class="header">
         <nav class="nav">
             <a href="#" class="logo">Mão na Obra</a>
-            <button class="hamburguer" aria-label="Menu hamburguer"></button>
+            <button class="hamburguer" aria-label="Menu hamburguer">
+                <!-- You can add an icon inside this button to visually represent the menu -->
+                ☰
+            </button>
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Serviços</a></li>
@@ -35,7 +39,6 @@
             <h2>Eletricista</h2>
             <p>Contrate um eletricista para fazer a instalação elétrica da sua casa</p>
             <button>Contrate Agora</button>
-
         </div>
         <div>
             <h2>Encanador</h2>
@@ -56,26 +59,30 @@
 
     <section class="sobre">
         <div class="info">
-        <h1>Sobre Nós</h1>
-        <p>Somos uma plataforma inovadora e confiável, criada para conectar você aos melhores prestadores de serviços em sua região. Se você precisa de um pintor, eletricista, encanador, pedreiro ou qualquer outro profissional para realizar pequenos ou grandes projetos em sua casa ou empresa, nós temos a solução ideal. A nossa missão é facilitar sua busca por profissionais qualificados, oferecendo um processo simples e seguro para garantir a satisfação de todos os envolvidos.</p>
-        <p>Nosso sistema permite que você encontre prestadores de serviços verificados e com avaliações reais de outros usuários, tornando a sua escolha mais assertiva e confiável. Ao acessar nossa plataforma, você poderá visualizar os perfis de diversos profissionais, com detalhes sobre suas especialidades, experiências e avaliações, o que torna a escolha do prestador de serviço muito mais transparente. Aqui, buscamos a excelência em atendimento e garantimos que todos os prestadores listados sejam altamente capacitados para atender às suas necessidades.</p>
-        <p>Queremos ser a sua primeira escolha quando se trata de serviços domésticos e comerciais. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana, permitindo que você encontre o profissional certo no momento em que mais precisa. Independentemente da complexidade do seu projeto, nosso objetivo é proporcionar uma experiência tranquila e sem preocupações, ajudando você a realizar suas tarefas com mais eficiência e qualidade.</p>
+            <h1>Sobre Nós</h1>
+            <p>Somos uma plataforma inovadora e confiável, criada para conectar você aos melhores prestadores de serviços em sua região. Se você precisa de um pintor, eletricista, encanador, pedreiro ou qualquer outro profissional para realizar pequenos ou grandes projetos em sua casa ou empresa, nós temos a solução ideal. A nossa missão é facilitar sua busca por profissionais qualificados, oferecendo um processo simples e seguro para garantir a satisfação de todos os envolvidos.</p>
+            <p>Nosso sistema permite que você encontre prestadores de serviços verificados e com avaliações reais de outros usuários, tornando a sua escolha mais assertiva e confiável. Ao acessar nossa plataforma, você poderá visualizar os perfis de diversos profissionais, com detalhes sobre suas especialidades, experiências e avaliações, o que torna a escolha do prestador de serviço muito mais transparente. Aqui, buscamos a excelência em atendimento e garantimos que todos os prestadores listados sejam altamente capacitados para atender às suas necessidades.</p>
+            <p>Queremos ser a sua primeira escolha quando se trata de serviços domésticos e comerciais. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana, permitindo que você encontre o profissional certo no momento em que mais precisa. Independentemente da complexidade do seu projeto, nosso objetivo é proporcionar uma experiência tranquila e sem preocupações, ajudando você a realizar suas tarefas com mais eficiência e qualidade.</p>
         </div>
-
-        <img src="/public/images/eletricista.png">
-        
+        <img src="/public/images/eletricista.png" alt="Imagem ilustrativa de um eletricista">
     </section>
 
     <section class="Trabalhe Conosco">
         <h1>Trabalhe Conosco</h1>
-        <form>
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Mensagem"></textarea>
-            <button>Enviar</button>
+        <form action="#" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
         </form>
     </section>
-    
+
     <section class="footer">
         <p>Desenvolvido por <a href="#">Patrick Magalhães</a></p>
     </section>
